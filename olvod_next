@@ -1,0 +1,34 @@
+// ==UserScript==
+// @name         欧乐下一集
+// @namespace    http://tampermonkey.net/
+// @version      2024-07-23
+// @description  try to take over the world!
+// @author       You
+// @match        *://*.olevod.com/player/vod/*
+// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+// @grant        none
+// ==/UserScript==
+
+(function() {
+
+    function clickElement(selector) {
+        let el = document.querySelector(selector);
+        if (el){
+            console.log(el.textContent);
+            el.click();
+        }
+    }
+
+    var slt2 = "#playerBoxTop > div > div > div > div.container > div > div.plyr__controls > div.plyr__controls__item.plyr__volume > div > div > div:nth-child(2) > div"
+
+    // Define the key combination (e.g., Ctrl + Shift + S)
+    document.addEventListener('keydown', function(e) {
+        if (e.key === ']') {
+            //e.preventDefault();
+            console.log("key");
+            clickElement(slt2);
+        }
+    }, false);
+
+
+})();
