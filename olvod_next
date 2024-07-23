@@ -2,8 +2,8 @@
 // @name         欧乐下一集
 // @namespace    https://github.com/tonylou7/olvod_next
 // @version      2024-07-23
-// @description  try to take over the world!
-// @author       You
+// @description  Short cut for olvod at full screen mode
+// @author       TonyLou
 // @match        *://*.olevod.com/player/vod/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
@@ -14,7 +14,6 @@
     function clickElement(selector) {
         let el = document.querySelector(selector);
         if (el){
-            console.log(el.textContent);
             el.click();
         }
     }
@@ -25,7 +24,6 @@
     document.addEventListener('keydown', function(e) {
         if (e.key === ']') {
             //e.preventDefault();
-            console.log("key");
             clickElement(slt2);
         }
     }, false);
