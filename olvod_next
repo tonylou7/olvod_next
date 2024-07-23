@@ -20,7 +20,6 @@
 
     var nextEl = "#playerBoxTop > div > div > div > div.container > div > div.plyr__controls > div.plyr__controls__item.plyr__volume > div > div > div:nth-child(2) > div"
 
-    // Define the key combination (e.g., Ctrl + Shift + S)
     document.addEventListener('keydown', function(e) {
         if (e.key === ']') {
             //e.preventDefault();
