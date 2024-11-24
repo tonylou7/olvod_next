@@ -5,6 +5,7 @@
 // @description  Short cut for olvod at full screen mode
 // @author       TonyLou
 // @match        *://*.olevod.com/player/vod/*
+// @match        *://*.iyf.tv/play/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
@@ -18,7 +19,12 @@
         }
     }
 
-    var nextEl = "#playerBoxTop > div > div > div > div.container > div > div.plyr__controls > div.plyr__controls__item.plyr__volume > div > div > div:nth-child(2) > div"
+     // Check which website is currently loaded
+    if (window.location.href.includes('olevod.com')) {
+        var nextEl = "#playerBoxTop > div > div > div > div.container > div > div.plyr__controls > div.plyr__controls__item.plyr__volume > div > div > div:nth-child(2) > div"
+    } else if (window.location.href.includes('example-website2.com')) {
+       var nextEl = "#main-player > vg-controls.bg-overlayer > div.control-left.ng-star-inserted > div.play-next.control-item.ng-star-inserted > div"
+    }
 
     document.addEventListener('keydown', function(e) {
         if (e.key === ']') {
