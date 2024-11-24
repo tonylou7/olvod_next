@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         欧乐下一集
+// @name         下一集
 // @namespace    https://github.com/tonylou7/olvod_next
 // @version      2024-07-23
 // @description  Short cut for olvod at full screen mode
@@ -20,10 +20,10 @@
     }
 
     var nextEl;
-
+     // Check which website is currently loaded
     if (window.location.href.includes('olevod.com')) {
         nextEl = "#playerBoxTop > div > div > div > div.container > div > div.plyr__controls > div.plyr__controls__item.plyr__volume > div > div > div:nth-child(2) > div"
-    } else if (window.location.href.includes('example-website2.com')) {
+    } else if (window.location.href.includes('iyf.tv')) {
         nextEl = "#main-player > vg-controls.bg-overlayer > div.control-left.ng-star-inserted > div.play-next.control-item.ng-star-inserted > div"
     }
 
