@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         下一集
+// @name         下一集快捷键
 // @namespace    https://github.com/tonylou7/olvod_next
 // @version      2024-07-23
-// @description  Short cut for olvod at full screen mode
+// @description  欧乐iyf"]"下一集快捷键
 // @author       TonyLou
 // @match        *://*.olevod.com/player/vod/*
 // @match        *://*.iyf.tv/play/*
